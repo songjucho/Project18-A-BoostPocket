@@ -23,6 +23,7 @@ class ReportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.items?.last?.rightBarButtonItem = UIBarButtonItem(title: "Preview", style: .done, target: self, action: #selector(previewButtonTouched))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -136,5 +137,9 @@ class ReportViewController: UIViewController {
         }
         
         return slices
+    }
+    
+    @objc func previewButtonTouched() {
+        print("previewBottonTouched")
     }
 }
