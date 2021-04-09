@@ -33,6 +33,7 @@
 		5C8C9196256E8436008C3919 /* TravelItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C9195256E8436008C3919 /* TravelItemViewModel.swift */; };
 		5C8C91AD256E8F0F008C3919 /* TravelViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C91AC256E8F0F008C3919 /* TravelViewModelTests.swift */; };
 		5C96E8E2256BDA4200246590 /* CountryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C96E8E1256BDA4200246590 /* CountryViewModelTests.swift */; };
+		5C978E7A26202FED0006440E /* PDFPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C978E7926202FED0006440E /* PDFPreviewViewController.swift */; };
 		5CAE96662577FC6300FD7F05 /* Double+Comma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE96652577FC6300FD7F05 /* Double+Comma.swift */; };
 		5CB682E5256C03F800830373 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB682E4256C03F800830373 /* CountryListViewModel.swift */; };
 		5CCB1265257DFF1D00C6788E /* HistoryItemViewModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCB1264257DFF1D00C6788E /* HistoryItemViewModelStub.swift */; };
@@ -183,6 +184,7 @@
 		5C8C9195256E8436008C3919 /* TravelItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelItemViewModel.swift; sourceTree = "<group>"; };
 		5C8C91AC256E8F0F008C3919 /* TravelViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TravelViewModelTests.swift; path = BoostPocketTests/TravelTests/TravelViewModelTests.swift; sourceTree = SOURCE_ROOT; };
 		5C96E8E1256BDA4200246590 /* CountryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModelTests.swift; sourceTree = "<group>"; };
+		5C978E7926202FED0006440E /* PDFPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPreviewViewController.swift; sourceTree = "<group>"; };
 		5CAE96652577FC6300FD7F05 /* Double+Comma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Comma.swift"; sourceTree = "<group>"; };
 		5CB682E4256C03F800830373 /* CountryListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
 		5CCB1264257DFF1D00C6788E /* HistoryItemViewModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItemViewModelStub.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 				5CE798BF257F7CDB00AC6C43 /* ReportViewController.swift */,
 				95F8A29B2580C9B800A33D3E /* ExpenseElementView.swift */,
 				95F8A29D2580C9CE00A33D3E /* ExpenseElementView.xib */,
+				5C978E7926202FED0006440E /* PDFPreviewViewController.swift */,
 			);
 			path = ReportScene;
 			sourceTree = "<group>";
@@ -994,6 +997,7 @@
 				5C15AB492577DED700244C6C /* HistoryHeaderCell.swift in Sources */,
 				9572F9AE256B9524003049CB /* CountryProvider.swift in Sources */,
 				5CD76EBF256C938D00BD6CE3 /* BoostPocket.xcdatamodeld in Sources */,
+				5C978E7A26202FED0006440E /* PDFPreviewViewController.swift in Sources */,
 				950BE473257F7C7B00ACC0CA /* String+IsPlaceholder.swift in Sources */,
 				95A42E7A25664DBE0007810C /* AppDelegate.swift in Sources */,
 				95AC159E2585ED5D0079F042 /* HistoryListSupport.swift in Sources */,

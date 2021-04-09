@@ -23,7 +23,7 @@ class ReportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.items?.last?.rightBarButtonItem = UIBarButtonItem(title: "Preview", style: .done, target: self, action: #selector(previewButtonTouched))
+        self.navigationController?.navigationBar.items?.last?.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(previewButtonTouched))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -140,6 +140,8 @@ class ReportViewController: UIViewController {
     }
     
     @objc func previewButtonTouched() {
-        print("previewBottonTouched")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PDFPreviewViewController") as? PDFPreviewViewController else { return }
+        present(vc, animated: true, completion: nil)
     }
 }
+

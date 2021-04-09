@@ -1275,6 +1275,36 @@
             </objects>
             <point key="canvasLocation" x="-349.27536231884062" y="1202.6785714285713"/>
         </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="tdk-14-paA">
+            <objects>
+                <viewController storyboardIdentifier="PDFPreviewViewController" id="Ol8-Ny-8N3" customClass="PDFPreviewViewController" customModule="BoostPocket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UIZ-wa-aVo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcc-mo-39p" customClass="PDFView">
+                                <rect key="frame" x="0.0" y="64" width="414" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ebM-qZ-aWb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qcc-mo-39p" firstAttribute="leading" secondItem="ebM-qZ-aWb" secondAttribute="leading" id="MDv-dQ-R4W"/>
+                            <constraint firstItem="ebM-qZ-aWb" firstAttribute="trailing" secondItem="Qcc-mo-39p" secondAttribute="trailing" id="T72-UA-vce"/>
+                            <constraint firstItem="Qcc-mo-39p" firstAttribute="top" secondItem="ebM-qZ-aWb" secondAttribute="top" constant="20" id="gAu-30-IuX"/>
+                            <constraint firstItem="ebM-qZ-aWb" firstAttribute="bottom" secondItem="Qcc-mo-39p" secondAttribute="bottom" constant="20" id="pLI-6x-8vZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PDFView" destination="Qcc-mo-39p" id="JM0-66-9Mv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4P-Y5-MH9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="1206"/>
+        </scene>
     </scenes>
     <resources>
         <image name="airplane" catalog="system" width="128" height="115"/>
