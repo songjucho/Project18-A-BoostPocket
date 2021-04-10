@@ -438,6 +438,7 @@
                         <outlet property="informationView" destination="yfq-Sb-hGQ" id="g1F-kT-yoA"/>
                         <outlet property="reportPieChartView" destination="0DJ-XU-Ifo" id="4Im-Qf-CD4"/>
                         <outlet property="summaryLabel" destination="Kar-kh-qej" id="UcF-zN-Fii"/>
+                        <outlet property="superScrollView" destination="Ym4-MA-8an" id="rmW-fx-ltZ"/>
                         <outlet property="totalExpenseKRWLabel" destination="6qg-YU-ldr" id="dlw-5w-FV7"/>
                         <outlet property="totalExpenseLabel" destination="LMc-N8-tE0" id="k7d-WH-CXr"/>
                     </connections>
