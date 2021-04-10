@@ -141,9 +141,10 @@ class ReportViewController: UIViewController {
     }
     
     @objc func previewButtonTouched() {
-        let path = superScrollView.PDFWithScrollView()
-        print("path: ", path)
+        //let path = superScrollView.PDFWithScrollView()
+        //print("path: ", path)
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "PDFPreviewViewController") as? PDFPreviewViewController else { return }
+        vc.documentData = superScrollView.PDFWithScrollView()
         present(vc, animated: true, completion: nil)
     }
 }
