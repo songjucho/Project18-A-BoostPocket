@@ -13,6 +13,7 @@ class ReportViewController: UIViewController {
     weak var travelItemViewModel: HistoryListPresentable?
     
     @IBOutlet weak var superScrollView: UIScrollView!
+    @IBOutlet weak var divider: UIView!
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var reportPieChartView: ReportPieChartView!
     @IBOutlet weak var totalExpenseKRWLabel: UILabel!
@@ -141,10 +142,8 @@ class ReportViewController: UIViewController {
     }
     
     @objc func previewButtonTouched() {
-        //let path = superScrollView.PDFWithScrollView()
-        //print("path: ", path)
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "PDFPreviewViewController") as? PDFPreviewViewController else { return }
-        vc.documentData = superScrollView.PDFWithScrollView()
+        vc.documentData = superScrollView.PDFWithScrollView(dividerHeight: divider.getCoordinate().y)
         present(vc, animated: true, completion: nil)
     }
 }

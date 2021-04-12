@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-    func PDFWithScrollView() -> Data {
+    func PDFWithScrollView(dividerHeight: CGFloat) -> Data {
         guard let scrollview = self as? UIScrollView else { return Data() }
         let pageDimensions = scrollview.bounds
         let pageSize = pageDimensions.size
@@ -31,14 +31,19 @@ extension UIView {
                     UIGraphicsBeginPDFPage()
                     
                     let offsetHorizontal = CGFloat(indexHorizontal) * pageSize.width
-                    let offsetVertical = CGFloat(indexVertical) * pageSize.height
+                    let offsetVertical = CGFloat(indexVertical) * dividerHeight
                     
                     scrollview.contentOffset = CGPoint(x: offsetHorizontal, y: offsetVertical)
-                    context.translateBy(x: -offsetHorizontal, y: -offsetVertical) // NOTE: Negative offsets
+                    if indexVertical == 0 {
+                        context.translateBy(x: -offsetHorizontal, y: self.frame.height - dividerHeight)
+                    } else {
+                        context.translateBy(x: -offsetHorizontal, y: -offsetVertical)
+                    }
                     scrollview.layer.render(in: context)
                 }
             }
         }
+        
         UIGraphicsEndPDFContext()
         
         scrollview.contentInset = savedContentInset
@@ -47,8 +52,8 @@ extension UIView {
         return outputData as Data
     }
     
-    func viewToPDF() -> String {
-        let data = PDFWithScrollView()
+    func viewToPDF(dividerHeight: CGFloat) -> String {
+        let data = PDFWithScrollView(dividerHeight: dividerHeight)
         return self.saveViewPdf(data: data)
     }
     
@@ -64,5 +69,23 @@ extension UIView {
         } else {
             return ""
         }
+    }
+    
+    // 옮겨야댐 - 스크롤뷰만 해당하는데 어떡하징?
+    func getCoordinate() -> CGPoint {
+        var x = self.frame.origin.x
+        var y = self.frame.origin.y
+        var oldView = self
+
+        while let superView = oldView.superview {
+            x += superView.frame.origin.x
+            y += superView.frame.origin.y
+            if superView.superview is UIScrollView {
+                break
+            }
+            oldView = superView
+        }
+
+        return CGPoint(x: x, y: y)
     }
 }

@@ -310,7 +310,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ym4-MA-8an">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym4-MA-8an">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="742" translatesAutoresizingMaskIntoConstraints="NO" id="6BA-mJ-pxK" userLabel="ContentView">
@@ -433,6 +433,7 @@
                     <tabBarItem key="tabBarItem" title="리포트" image="chart.pie.fill" catalog="system" id="hU1-KU-wkB"/>
                     <connections>
                         <outlet property="currencyCodeLabel" destination="z2v-6p-uXx" id="X9p-fK-7Zu"/>
+                        <outlet property="divider" destination="gfA-9A-qOs" id="zt0-C3-9OU"/>
                         <outlet property="expensesStackView" destination="t7t-L2-t41" id="fW6-8y-y4t"/>
                         <outlet property="flagImageView" destination="chd-LF-U5W" id="sMf-8H-YOj"/>
                         <outlet property="informationView" destination="yfq-Sb-hGQ" id="g1F-kT-yoA"/>
